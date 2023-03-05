@@ -100,7 +100,7 @@ class _GroupedListViewState extends State<GroupedListView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Groupedd ListView'),
+        title: Text('Groupeddg ListView'),
       ),
       body: ListView.separated(
         itemCount: _groupedData.length,
