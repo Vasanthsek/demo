@@ -111,7 +111,7 @@ class _GroupedListViewState extends State<GroupedListView> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
+                padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 9),
                 child: Text(
                   key,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
