@@ -111,7 +111,7 @@ class _GroupedListViewState extends State<GroupedListView> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 9),
                 child: Text(
                   key,
                   style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
@@ -147,76 +147,3 @@ class _GroupedListViewState extends State<GroupedListView> {
 }
 
 
-// class MyListTile {
-//   final String title;
-//   final DateTime date;
-
-//   MyListTile({required this.title, required this.date});
-// }
-
-
-
-// class App extends StatelessWidget {
-//   final List<MyListTile> listTiles = [
-//     MyListTile(title: 'Today 1', date: DateTime.now()),
-//     MyListTile(title: 'Today 2', date: DateTime.now()),
-//     MyListTile(title: 'Weekly 1', date: DateTime.now().add(Duration(days: 7))),
-//     MyListTile(title: 'Weekly 2', date: DateTime.now().add(Duration(days: 5))),
-//     MyListTile(title: 'Monthly 1', date: DateTime.now().add(Duration(days: 30))),
-//     MyListTile(title: 'Monthly 2', date: DateTime.now().add(Duration(days: 30))),
-//   ];
-
-//   @override
-//   Widget build(BuildContext context) {
-//     final Map<String, List<MyListTile>> groupedByDate =
-//         groupBy(listTiles, (MyListTile obj) {
-//       final int daysDiff = DateTime.now().difference(obj.date).inDays;
-//       if (daysDiff == 0) {
-//         return 'Today';
-//       } else if (daysDiff <= 7) {
-//         return 'Weekly';
-//       } else {
-//         return 'Monthly';
-//       }
-//     });
-
-//     return MaterialApp(
-//       home: Scaffold(
-//         appBar: AppBar(
-//           title: Text('Grouped List'),
-//         ),
-//         body: ListView.builder(
-//           itemCount: groupedByDate.length,
-//           itemBuilder: (BuildContext context, int index) {
-//             final String key = groupedByDate.keys.elementAt(index);
-//             final List<MyListTile> values = groupedByDate[key]!;
-
-//             return Column(
-//               crossAxisAlignment: CrossAxisAlignment.start,
-//               children: [
-//                 Padding(
-//                   padding: const EdgeInsets.all(8.0),
-//                   child: Text(
-//                     key,
-//                     style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
-//                   ),
-//                 ),
-//                 ListView.builder(
-//                   shrinkWrap: true,
-//                   physics: NeverScrollableScrollPhysics(),
-//                   itemCount: values.length,
-//                   itemBuilder: (BuildContext context, int index) {
-//                     return ListTile(
-//                       title: Text(values[index].title),
-//                       subtitle: Text(values[index].date.toString()),
-//                     );
-//                   },
-//                 ),
-//               ],
-//             );
-//           },
-//         ),
-//       ),
-//     );
-//   }
-// }
