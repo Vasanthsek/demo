@@ -114,7 +114,7 @@ class _GroupedListViewState extends State<GroupedListView> {
                 padding: const EdgeInsets.symmetric(horizontal: 17, vertical: 9),
                 child: Text(
                   key,
-                  style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 17, fontWeight: FontWeight.bold),
                 ),
               ),
               ListView.builder(
